@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://igw-demo.every-pay.com/api/v3/payments/refund
+    body:
+      encoding: UTF-8
+      string: '{"payment_reference":"db98561ec7a380d2e0872a34ffccdd0c4d2f2fd237b6d0ac22f88f52a","api_username":"someuser","amount":"12.67","nonce":199371315853919146519086224534557392392,"timestamp":"2019-05-31T09:14:58+03:00"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic c29tZXVzZXI6c29tZXBhc3N3b3Jk
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 17 May 2020 08:49:11 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Vary:
+      - Origin
+      Strict-Transport-Security:
+      - max-age=31536000
+      Www-Authenticate:
+      - Basic realm="API Authorization"
+      X-Request-Id:
+      - 1dd3e558-6444-4a58-b19a-7b3f6122e960
+      P3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      X-Runtime:
+      - '0.065465'
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"api_username":"abc12345","initial_amount":"2.50","standing_amount":"1.50","transaction_time":"2015-04-02T07:53:07Z","payment_reference":"db98561ec7a380d2e0872a34ffccdd0c4d2f2fd237b6d0ac22f88f52a","payment_state":"refunded"}'
+    http_version: null
+  recorded_at: Sun, 17 May 2020 08:49:12 GMT
+recorded_with: VCR 5.1.0

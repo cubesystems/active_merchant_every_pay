@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://igw-demo.every-pay.com/api/v3/payments/oneoff
+    body:
+      encoding: UTF-8
+      string: '{"api_username":"someuser","account_name":"someaccount","customer_url":"https://httpbin.org/get","amount":"0.13","nonce":199371315853919146519086224534557392392,"timestamp":"2019-05-31T09:14:58+03:00","order_reference":"Order
+        #1234"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic c29tZXVzZXI6c29tZXBhc3N3b3Jk
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Sun, 17 May 2020 09:33:53 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      Status:
+      - 401 Unauthorized
+      Vary:
+      - Origin
+      Strict-Transport-Security:
+      - max-age=31536000
+      Www-Authenticate:
+      - Basic realm="API Authorization"
+      X-Request-Id:
+      - 8a4d7833-401c-4161-ac2d-9539f75dd617
+      P3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      X-Runtime:
+      - '0.126235'
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: null
+  recorded_at: Sun, 17 May 2020 09:33:53 GMT
+recorded_with: VCR 5.1.0

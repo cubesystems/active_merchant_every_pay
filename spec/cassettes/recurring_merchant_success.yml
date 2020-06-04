@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://igw-demo.every-pay.com/api/v3/payments/mit
+    body:
+      encoding: UTF-8
+      string: '{"merchant_ip":"127.0.0.1","token":"X","token_agreement":"recurring","api_username":"someuser","account_name":"someaccount","amount":"12.67","nonce":199371315853919146519086224534557392392,"timestamp":"2019-05-31T09:14:58+03:00"}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      Authorization:
+      - Basic c29tZXVzZXI6c29tZXBhc3N3b3Jk
+      Connection:
+      - close
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 17 May 2020 08:44:08 GMT
+      Content-Type:
+      - text/plain
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Vary:
+      - Origin
+      Strict-Transport-Security:
+      - max-age=31536000
+      Www-Authenticate:
+      - Basic realm="API Authorization"
+      X-Request-Id:
+      - 3a9b3dbd-2f59-4838-9b0d-ac4e08d4aac3
+      P3p:
+      - CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"
+      X-Runtime:
+      - '0.115054'
+      X-Powered-By:
+      - Phusion Passenger
+      Server:
+      - nginx + Phusion Passenger
+    body:
+      encoding: UTF-8
+      string: '{"api_username":"abc12345","account_name":"EUR1","initial_amount":10.0,"standing_amount":10.0,"order_reference":"feiwhp28qy8ks7i12i63","stan":"1234","email":"user@example.com","payment_method":"card","cc_details":{"token":"d841bcc672b0f76523a7fa13","last_four_digits":"1234","month":"1","year":"2017","holder_name":"Tom Smith","type":"master_card","issuer_country":"EE","issuer":"LHV Bank","cobrand":"Partner deebet","funding_source":"Debit","product":"DEBIT STANDARD","state_3ds":"no3ds"},"fraud_score":"500","warnings":{"country_match":["Card issuer country (Estonia) does not match the buyer country ()."]},"payment_created_at":"2019-06-05T13:14:15+03:00","payment_reference":"db98561ec7a380d2e0872a34ffccdd0c4d2f2fd237b6d0ac22f88f52a","payment_state":"settled"}'
+    http_version: null
+  recorded_at: Sun, 17 May 2020 08:44:08 GMT
+recorded_with: VCR 5.1.0

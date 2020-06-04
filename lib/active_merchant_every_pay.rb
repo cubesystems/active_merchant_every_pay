@@ -1,0 +1,5 @@
+require "active_merchant"
+require "active_merchant/billing/every_pay_api_scheme"
+require "active_merchant/billing/every_pay_request"
+require "active_merchant/billing/every_pay_response"
+require "active_merchant/billing/every_pay_gateway"
