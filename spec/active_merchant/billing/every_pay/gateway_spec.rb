@@ -2,6 +2,7 @@ require "spec_helper"
 
 describe ActiveMerchant::Billing::EveryPayGateway do
   let(:gateway_options) {{
+    gateway_url: "https://igw-demo.every-pay.com/api/v3",
     api_username: "someuser",
     api_secret: "somepassword",
     account_name: "someaccount",
@@ -22,23 +23,10 @@ describe ActiveMerchant::Billing::EveryPayGateway do
   end
 
   describe "gateway initialization options" do
-    [:api_username, :api_secret, :account_name, :customer_url].each do|option|
+    [:gateway_url, :api_username, :api_secret, :account_name, :customer_url].each do|option|
       it "requires #{option} option" do
         gateway_options.delete(option)
         expect{ described_class.new(gateway_options) }.to raise_error ArgumentError, "Missing required parameter: #{option}"
-      end
-    end
-
-    context "when in production mode" do
-      it "requires :gateway_url option" do
-        allow(ActiveMerchant::Billing::Base).to receive(:test?).and_return(false)
-        expect{ described_class.new(gateway_options) }.to raise_error ArgumentError, "Missing required parameter: gateway_url"
-      end
-    end
-
-    context "when in test mode" do
-      it "does not require :gateway_url option and uses TEST_GATEWAY_URL" do
-        expect(described_class.new(gateway_options).options[:gateway_url]).to eq described_class::TEST_GATEWAY_URL
       end
     end
   end

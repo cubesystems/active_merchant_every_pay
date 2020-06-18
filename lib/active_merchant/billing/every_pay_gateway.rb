@@ -2,13 +2,10 @@ module ActiveMerchant
   module Billing
     class EveryPayGateway < Gateway
 
-      TEST_GATEWAY_URL = "https://igw-demo.every-pay.com/api/v3"
-
       self.display_name = "EveryPay"
       self.money_format = :dollars
 
       def initialize(options = {})
-        options[:gateway_url] = TEST_GATEWAY_URL if ActiveMerchant::Billing::Base.test?
 
         required_options = [:api_username, :api_secret, :account_name, :gateway_url, :customer_url]
 
