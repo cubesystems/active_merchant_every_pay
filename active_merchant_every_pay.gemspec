@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name        = "active_merchant_every_pay"
-  s.version     = "1.0.1"
+  s.version     = "1.0.2"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["CubeSystems"]
   s.email       = ["info@cubesystems.lv"]
