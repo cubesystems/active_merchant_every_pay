@@ -56,6 +56,7 @@ module ActiveMerchant
               shipping_state: OPTIONAL_PARAM,
               locale: OPTIONAL_PARAM,
               request_token: OPTIONAL_PARAM,
+              token_consent_agreed: OPTIONAL_PARAM,
               timestamp: REQUIRED_PARAM,
               skin_name: OPTIONAL_PARAM,
               integration_details: OPTIONAL_PARAM
